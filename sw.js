@@ -19,19 +19,19 @@
  
 // Version 0.46
 
-importScripts('/cache-polyfill.js');
+importScripts('/airhorn/cache-polyfill.js');
 
 self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open('airhorner').then(function(cache) {
       return cache.addAll([
-        '/',
-        '/index.html',
-        '/index.html?homescreen=1',
-        '/?homescreen=1',
-        '/styles/main.css',
-        '/scripts/main.min.js',
-        '/sounds/airhorn.mp3'
+        '/airhorn/',
+        '/airhorn/index.html',
+        '/airhorn/index.html?homescreen=1',
+        '/airhorn/?homescreen=1',
+        '/airhorn/styles/main.css',
+        '/airhorn/scripts/main.min.js',
+        '/airhorn/sounds/airhorn.mp3'
       ]).then(function() {
         return self.skipWaiting();
       });
