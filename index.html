@@ -40,10 +40,10 @@
                         </div>
                   </div>
             </div>
-            <script src="./scripts/main.min.js"></script>
+            <script src="./airhorn/scripts/main.min.js"></script>
             <script>
                   if('serviceWorker' in navigator) {
-                    navigator.serviceWorker.register('./sw.js', { scope: '/' })
+                    navigator.serviceWorker.register('./airhorn/sw.js', { scope: '/airhorn/' })
                       .then(function(registration) { 
                             console.log("Service Worker Registered"); 
                       });
