@@ -26,6 +26,7 @@ self.addEventListener('install', function(e) {
     caches.open('airhorner').then(function(cache) {
       return cache.addAll([
         '/airhorn/',
+        '/airhorn/test.json',
         '/airhorn/index.html',
         '/airhorn/index.html?homescreen=1',
         '/airhorn/?homescreen=1',
