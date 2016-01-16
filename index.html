@@ -43,7 +43,7 @@
             <script src="./scripts/main.min.js"></script>
             <script>
                   if('serviceWorker' in navigator) {
-                    navigator.serviceWorker.register('./sw.js', { scope: '/' })
+                    navigator.serviceWorker.register('./sw.js', { scope: '/airhorn/' })
                       .then(function(registration) { 
                             console.log("Service Worker Registered"); 
                       });
