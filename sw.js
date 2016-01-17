@@ -49,6 +49,8 @@ self.addEventListener('fetch', function(event) {
   
   event.respondWith(
     caches.match(event.request).then(function(response) {
+      if (response) {console.log("using cache");}
+      else {console.log("not using cache");}
       return response || fetch(event.request);
     })
   );
