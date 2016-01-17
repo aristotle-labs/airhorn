@@ -45,12 +45,10 @@ self.addEventListener('activate', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-  console.log(event.request.url);
-  
   event.respondWith(
     caches.match(event.request).then(function(response) {
-      if (response) {console.log("using cache");}
-      else {console.log("not using cache");}
+      if (response) {console.log("using cache for "+event.request.url);}
+      else {console.log("not using cache for "+event.request.url);}
       return response || fetch(event.request);
     })
   );
